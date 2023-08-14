@@ -11,4 +11,6 @@ export const Container = styled.div`
 
 export const Button = styled.button`
     margin: 5px;
+    cursor: pointer;
 `;
+

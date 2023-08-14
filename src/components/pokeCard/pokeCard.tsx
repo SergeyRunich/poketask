@@ -17,8 +17,7 @@ export const PokeCard: React.FC<PokeCardProps> = ({ name }) => {
   return (
     <PokeCardItem>
       <h1>{data?.name}</h1>
-      <span>Height: {data?.height}</span>
-      <span>Weight: {data?.weight}</span>
+      <span>Height: {data?.height}</span> <span>Weight: {data?.weight}</span>
     </PokeCardItem>
   );
 };
