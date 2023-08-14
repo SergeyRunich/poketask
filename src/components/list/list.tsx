@@ -3,21 +3,13 @@ import type { Pokemon } from "../../pages/home/home";
 import { Container } from "./styled";
 
 type ListProps = {
-  data?: Pokemon[];
-  error?: string;
+  pokemons: Pokemon[];
 };
 
-export type PokeCardProps = {
-  name: string;
-};
-
-export const List: React.FC<ListProps> = ({ data, error }) => {
-  if (error) return <div>Loading Error</div>;
-  if (!data) return <div>Please wait</div>;
-
+export const List: React.FC<ListProps> = ({ pokemons }) => {
   return (
     <Container>
-      {data.map((pokemon) => (
+      {pokemons.map((pokemon) => (
         <PokeCard key={pokemon.name} name={pokemon.name} />
       ))}
     </Container>
