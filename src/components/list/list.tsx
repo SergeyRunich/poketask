@@ -1,7 +1,13 @@
+import { PokeCard } from "../pokeCard";
 import type { Pokemon } from "../../pages/home/home";
+
 type ListProps = {
   data?: Pokemon[];
   error?: string;
+};
+
+export type PokeCardProps = {
+  name: string;
 };
 
 export const List: React.FC<ListProps> = ({ data, error }) => {
@@ -11,10 +17,7 @@ export const List: React.FC<ListProps> = ({ data, error }) => {
   return (
     <div>
       {data.map((pokemon) => (
-        <div key={pokemon.name}>
-          {/* <PokemonCard name={pokemon.name} index={index + 1} /> */}
-          {pokemon.name}
-        </div>
+        <PokeCard key={pokemon.name} name={pokemon.name} />
       ))}
     </div>
   );
