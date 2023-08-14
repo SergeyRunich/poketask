@@ -12,8 +12,6 @@ export type Pokemon = {
   name: string;
 };
 
-type HandlePageChange = (page: number) => void;
-
 export const HomePage: React.FC = () => {
   const [currentPage, setCurrentPage] = useState<number>(1);
   const handlePageChange = (page: number) => {

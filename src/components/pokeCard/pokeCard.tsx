@@ -11,7 +11,7 @@ type PokemonApiResponse = {
 };
 
 export const PokeCard: React.FC<PokeCardProps> = ({ name }) => {
-  const { data, error } = useSWR<PokemonApiResponse, AxiosError<string>>(
+  const { data } = useSWR<PokemonApiResponse, AxiosError<string>>(
     `pokemon/${name}`
   );
   return (
