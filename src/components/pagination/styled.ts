@@ -1,3 +1,14 @@
 import styled from "@emotion/styled";
 
-export const Wrapper = styled.div``;
+export const Container = styled.div`
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    overflow: hidden;
+    padding: 5px;
+    box-sizing: border-box;
+`;
+
+export const Button = styled.button`
+    margin: 5px;
+`;

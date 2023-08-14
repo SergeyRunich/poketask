@@ -1,5 +1,6 @@
 import { PokeCard } from "../pokeCard";
 import type { Pokemon } from "../../pages/home/home";
+import { Container } from "./styled";
 
 type ListProps = {
   data?: Pokemon[];
@@ -15,10 +16,10 @@ export const List: React.FC<ListProps> = ({ data, error }) => {
   if (!data) return <div>Please wait</div>;
 
   return (
-    <div>
+    <Container>
       {data.map((pokemon) => (
         <PokeCard key={pokemon.name} name={pokemon.name} />
       ))}
-    </div>
+    </Container>
   );
 };

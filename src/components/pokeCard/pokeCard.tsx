@@ -1,6 +1,7 @@
 import { PokeCardProps } from "../list/list";
 import useSWR from "swr";
 import { AxiosError } from "axios";
+import { PokeCardItem } from "./styled";
 
 type PokemonApiResponse = {
   results: object;
@@ -14,8 +15,10 @@ export const PokeCard: React.FC<PokeCardProps> = ({ name }) => {
     `pokemon/${name}`
   );
   return (
-    <div className='card'>
-      {data?.name}, Height: {data?.height}, Weight: {data?.weight}
-    </div>
+    <PokeCardItem>
+      <h1>{data?.name}</h1>
+      <span>Height: {data?.height}</span>
+      <span>Weight: {data?.weight}</span>
+    </PokeCardItem>
   );
 };
